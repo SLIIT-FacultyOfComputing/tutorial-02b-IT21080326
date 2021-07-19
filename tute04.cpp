@@ -2,7 +2,7 @@
 
 Write a program to calculate the function called nCr which is defined as
 
-nCr = n!/ r!(n−r)!
+nCr = n!/ r!(nâˆ’r)!
 Where n! is the factorial of n.
 
 Implement the functions
@@ -22,8 +22,24 @@ int main() {
   std::cin >> n;
   std::cout << "Enter a value for r ";
   std::cin >> r;
-  std::cout << "nCr = ";
+  std::cout << "nCr = " ;
   std::cout << nCr(n,r);
   std::cout << std::endl;
   return 0;
+}
+long Factorial(int no)
+{
+  int fac;
+  for(int i=no ; i <= 1 ; i--)
+  {
+    fac = fac * i;
+  }
+  return fac;
+}
+long nCr(int n, int r)
+{
+  int ncr;
+  
+  ncr = Factorial(n) /  Factorial(n) * (n - r);
+  return ncr;
 }
